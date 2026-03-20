@@ -1,31 +1,32 @@
-e<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>输入数字看图片</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>输入数字</title>
 </head>
-<body style="text-align:center; margin-top:100px;">
+
+<body style="text-align:center; margin-top:100px; font-family:sans-serif;">
 
   <h2>현재 앉으신 자리번호를 입력해 주세요</h2>
-    <h4>숫자만 입력하신 후, "다음"버틈을 눌러주세요</h4>
-  <input type="number" id="userInput">
-  <br><br>
-  <button onclick="showImage()">다음</button>
+  <h4>숫자만 입력하신 후, "다음"버튼을 눌러주세요</h4>
 
+  <input type="number" id="userInput" style="padding:10px; font-size:16px;">
   <br><br>
-  <img id="myImage" src="" style="display:none; max-width:300px;">
+
+  <button onclick="goNext()" style="padding:10px 20px; font-size:16px;">다음</button>
 
   <script>
-  function showImage() {
-    var input = document.getElementById("userInput").value;
+    function goNext() {
+      var input = document.getElementById("userInput").value;
 
-    if (input !== "") {
-      var img = document.getElementById("myImage");
-
-      img.src = "F1.jpeg";;
-      img.style.display = "block";
+      if (input !== "") {
+        // 跳转到下一页，并带上参数
+        window.location.href = "result.html?seat=" + input;
+      } else {
+        alert("숫자를 입력해 주세요");
+      }
     }
-  }
-</script>
+  </script>
 
 </body>
 </html>
