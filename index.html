@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>输入数字看图片</title>
+</head>
+<body style="text-align:center; margin-top:100px;">
+
+  <h2>현재 앉으신 자리번호를 입력해 주세요</h2>
+    <h4>숫자만 입력하신 후, "다음"버틈을 눌러주세요</h4>
+  <input type="number" id="userInput">
+  <br><br>
+  <button onclick="showImage()">다음</button>
+
+  <br><br>
+  <img id="myImage" src="" style="display:none; max-width:300px;">
+
+  <script>
+    function showImage() {
+      var input = document.getElementById("userInput").value;
+      if (input !== "") {
+        document.getElementById("myImage").src = "你的图片链接.jpg";
+        document.getElementById("myImage").style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
