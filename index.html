@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+e<!DOCTYPE html>
 <html>
 <head>
   <title>输入数字看图片</title>
@@ -15,14 +15,17 @@
   <img id="myImage" src="" style="display:none; max-width:300px;">
 
   <script>
-    function showImage() {
-      var input = document.getElementById("userInput").value;
-      if (input !== "") {
-        document.getElementById("myImage").src = "你的图片链接.jpg";
-        document.getElementById("myImage").style.display = "block";
-      }
+  function showImage() {
+    var input = document.getElementById("userInput").value;
+
+    if (input !== "") {
+      var img = document.getElementById("myImage");
+
+      img.src = "F1.jpeg";;
+      img.style.display = "block";
     }
-  </script>
+  }
+</script>
 
 </body>
 </html>
